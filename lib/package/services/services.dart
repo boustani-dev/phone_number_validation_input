@@ -37,6 +37,9 @@ bool checkPhoneNumberLength(String strippedNumber, CountryDialCode? country) {
 
 class Utils {
   Utils._();
+  static var onlyDigitsValidation = RegExp(r'^\+?[0-9]*$');
+  static var emailValidation =
+      RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$');
   static var phoneNumberValidation = RegExp(
       r'^(\+\d{1,2}\s?)?0?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$');
   static const Size smallDeviceSize = Size(320, 534);

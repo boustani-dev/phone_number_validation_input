@@ -4,9 +4,9 @@
 ## Features
 
 - Validate phone numbers based on country dial codes
+- Ability to accept email address
+- Can be used as a simple TextField
 - Customizable UI elements including text style, border, hint text, and more
-- Optional suffix icon with SVG support
-- Error messages for empty fields, invalid phone numbers, and invalid length
 
 ## Getting started
 
@@ -43,6 +43,7 @@ class MyHomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: PhoneNumberValidatorInput(
           controller: _phoneController,
+		  canAcceptEmail: false,
           hintText: 'e.g., +98 912 345 6789',
           emptyFieldErrorMessage: 'Please enter a phone number',
           inValidPhoneNumberErrorMessage: 'Please enter a valid phone number',
@@ -60,33 +61,47 @@ class MyHomePage extends StatelessWidget {
 ## Customization
 The PhoneNumberValidatorInput widget provides several properties to customize its appearance and behavior:
 
-- **height:** Height of the input field
-- **autoFocus:** Automatically focus the input field
-- **style:** Text style for the input field
-- **onChanged:** Callback for when the input changes
-- **maxLength:** Maximum length of the input
-- **isEnabled:** Enable or disable the input field
-- **alignment:** Text alignment
-- **focusNode:** Focus node for the input field
-- **maxLines:** Maximum number of lines
-- **isSecureText:** Obscure text for password fields
-- **suffixIconPath:** Path to the suffix icon
-- **onIconPressed:** Callback for when the suffix icon is pressed
-- **svgSuffixIconColor:** Color for the SVG suffix icon
-- **suffixIconWidget:** Custom widget for the suffix icon
-- **fillColor:** Fill color for the input field
-- **border:** Border for the input field
-- **hintStyle:** Text style for the hint text
-- **labelText:** Label text for the input field
-- **margin:** Margin around the input field
-- **hintText:** Hint text for the input field
-- **emptyFieldErrorMessage:** Error message for empty fields
-- **inValidPhoneNumberErrorMessage:** Error message for invalid phone numbers
-- **inValidLengthErrorMessage:** Error message for invalid phone number length
+- **height:** Height of the input field.
+- **cursorHeight:** Height of the cursor.
+- **margin:** Margin around the input field.
+- **autoFocus:** Automatically focus the input field.
+- **style:** Text style for the input field.
+- **onChanged:** Callback for when the input changes.
+- **maxLength:** Maximum length of the input.
+- **minLines:** Minimum number of lines for the input field.
+- **isEnabled:** Enable or disable the input field.
+- **canAcceptEmail:** Allow the input field to accept email addresses.
+- **alignment:** Text alignment.
+- **focusNode:** Focus node for the input field.
+- **type:** Text input type.
+- **validator:** Validator function for the input field.
+- **controller:** Controller for the input field.
+- **maxLines:** Maximum number of lines for the input field.
+- **isSecureText:** Obscure text for password fields.
+- **labelText:** Label text for the input field.
+- **suffixIconPath:** Path to the suffix icon.
+- **emptyFieldErrorMessage:** Error message for empty fields.
+- **inValidPhoneNumberErrorMessage:** Error message for invalid phone numbers.
+- **inValidEmailErrorMessage:** Error message for invalid email addresses.
+- **inValidLengthErrorMessage:** Error message for invalid phone number length.
+- **onSuffixIconPressed:** Callback for when the suffix icon is pressed.
+- **onTap:** Callback for when the input field is tapped.
+- **svgSuffixIconColor:** Color for the SVG suffix icon.
+- **suffixIconWidget:** Custom widget for the suffix icon.
+- **fillColor:** Fill color for the input field.
+- **cursorColor:** Color of the cursor.
+- **cursorErrorColor:** Color of the cursor when an error occurs.
+- **border:** Border for the input field.
+- **hintText:** Hint text for the input field.
+- **hintStyle:** Text style for the hint text.
+- **labelStyle:** Text style for the label text.
+- **errorStyle:** Text style for the error messages.
+- **readOnly:** Make the input field read-only.
+- **canRequestFocus:** Allow the input field to request focus.
+- **textCapitalization:** Text capitalization behavior for the input field.
 
 
 Contributions are welcome! Please submit a pull request or open an issue on GitHub.
 
-This project is licensed under the BSD 3-Clause License. See the LICENSE file for details.
 
 

@@ -1,16 +1,16 @@
 name: phone_number_validation_input
 description: "this package validates phone numbers based on their country dial code and ensures they meet the correct length requirements"
-version: 1.0.0
-homepage:
+version: 1.0.5
+homepage: https://github.com/boustani-dev/phone_number_validation_input
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: '>=3.1.0 <4.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.10+1
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
